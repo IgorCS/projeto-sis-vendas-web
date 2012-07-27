@@ -10,6 +10,15 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
  
+ <filter> 
+  <filter-name>conexaoFilter</filter-name>
+  <filter-class>sis.com.conexao.ConexaoHibernateFilter</filter-class>
+  </filter>
+ 
+  <filter-mapping>
+  <filter-name>conexaoFilter</filter-name>
+  <url-pattern>*.jsf</url-pattern>
+  </filter-mapping>
   
   <servlet>
     <servlet-name>Faces Servlet</servlet-name>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Lista de Categorias</title>
+</h:head>
+
+<h:body>
+
+<h1 align="center"> Listagem de Categorias</h1>
+
+
+<h:form>
+
+<h:messages/>
+
+<h:dataTable value="#{categoriaBean.lista}" var="categoria" rules="rows" cellpadding="5" >
+
+<f:facet name="caption">
+	A listagem a segrir mostra todas as categorias cadastradas!!!
+</f:facet>
+
+<f:facet name="header">Listagem de Categorias</f:facet>
+<f:facet name="footer">Final da Listagem</f:facet>
+
+<h:column>
+<f:facet name="header">Código</f:facet>
+<h:outputText value="#{categoria.codigoCategoria}"/>
+</h:column>
+
+<h:column>
+<f:facet name="header">Nome</f:facet>
+<h:outputText value="#{categoria.descricao}"/>
+
+</h:column>
+</h:dataTable>
+
+</h:form>
+
+<h:outputLink  value="index.xhtml"><h:outputText value="Página Principal" /> </h:outputLink>
+</h:body>
+</html>
