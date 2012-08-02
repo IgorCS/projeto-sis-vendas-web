@@ -12,5 +12,6 @@
         <property name="hibernate.current_session_context_class">org.hibernate.context.ThreadLocalSessionContext</property>
         
         <mapping class="sis.com.basicas.Categoria"/>
+        <mapping class="sis.com.basicas.UnidadeDeMedida"/>
     </session-factory>
 </hibernate-configuration>
