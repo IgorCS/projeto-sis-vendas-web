@@ -39,7 +39,19 @@ public class CategoriaBean {
 		return this.lista;
 		
 	}
+	
+	public String editarCategoria(){
+		return "categoria";
+	}
 
+	public String deletarCategoria(){
+		
+		CategoriaFachada categoriaFachada = new CategoriaFachada();
+		categoriaFachada.excluirCategoria(this.categoria);
+		this.lista = null;
+		return null;
+	}
+	
 	public Categoria getCategoria() {
 		return categoria;
 	}
