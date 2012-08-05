@@ -23,14 +23,13 @@ public class CategoriaBean {
 		
 		
 		CategoriaFachada categoriaFachada = new CategoriaFachada();
-		categoriaFachada.salvarCategoria(this.categoria);
+		categoriaFachada.salvarCategoria(this.categoria);	
 		
-		return "categoriaSucesso";
+		return "categoria";
+	
 	}
 	
 	public List<?> getLista(){
-		
-		
 			
 			CategoriaFachada categoriaFachada = new CategoriaFachada();
 			this.lista = categoriaFachada.listar();
