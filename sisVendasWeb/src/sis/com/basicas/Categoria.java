@@ -10,24 +10,21 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table (name = "categoria")
-@SequenceGenerator (name="codigocategoria", sequenceName="codigocategoria")
+@Table(name = "categoria")
+@SequenceGenerator(name = "codigocategoria", sequenceName = "codigocategoria")
+public class Categoria implements Serializable {
 
-public class Categoria implements Serializable{
-
-	
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
-	@Column (name = "codigocategoria")
-	@GeneratedValue (generator="codigocategoria", strategy = GenerationType.SEQUENCE)
-	
+	@Column(name = "codigocategoria")
+	@GeneratedValue(generator = "codigocategoria", strategy = GenerationType.SEQUENCE)
 	private int codigoCategoria;
-	
-	@Column (name = "descricaocategoria")
+
+	@Column(name = "descricaocategoria")
 	private String descricao;
 
-	public Categoria(){
+	public Categoria() {
 	}
 
 	public int getCodigoCategoria() {
@@ -78,7 +75,5 @@ public class Categoria implements Serializable{
 			return false;
 		return true;
 	}
-	
-	
-}
 
+}
