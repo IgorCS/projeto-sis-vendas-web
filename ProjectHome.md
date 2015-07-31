@@ -1,0 +1,1 @@
+sistema para controle de produtos e vendas de empresas de pequeno porte.
